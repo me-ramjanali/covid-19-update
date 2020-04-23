@@ -9,7 +9,7 @@
           height="50"
           class="logo"
           src="../../public/icon.svg"
-          alt="logo">Covid-19 Update
+          alt="logo">Covid-19 Tracker
       </b-navbar-brand>
     </b-navbar>
   </div>

@@ -24,6 +24,7 @@
             :date-format-options="{ year: 'numeric', month: 'numeric', day: '2-digit' }"
           ></b-form-datepicker>
           <b-form-checkbox
+            :disabled="!country"
             id="all"
             class="mb-2 mr-sm-2 mb-sm-0"
             v-model="showAll"
