@@ -1,7 +1,10 @@
 <template>
   <b-container class="bv-example-row">
-    <b-row class="mt-3" v-if="!data.length">
-      <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>No Data Found!</h1></b-alert></b-col>
+    <b-row class="mt-3" v-if="!data.length && fetched">
+      <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>No record found!</h1></b-alert></b-col>
+    </b-row>
+    <b-row class="mt-3" v-if="!fetched">
+      <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>Search for records!</h1></b-alert></b-col>
     </b-row>
     <b-row
       v-for="(result, index) in data"
@@ -88,11 +91,22 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'statistics',
 
   props: {
     data: { type: Array }
+  },
+
+  computed: {
+    ...mapState('statistics', {
+      data: 'result',
+      error: 'error',
+      fetched: 'fetched',
+      loading: 'loading'
+    })
   }
 }
 </script>

@@ -36,7 +36,7 @@
         </b-form>
       </b-row>
     </b-container>
-    <statistics :data="data" />
+    <statistics />
   </div>
 </template>
 
@@ -96,11 +96,6 @@ export default {
   computed: {
     ...mapState('countries', {
       countries: 'items',
-      error: 'error',
-      loading: 'loading'
-    }),
-    ...mapState('statistics', {
-      data: 'result',
       error: 'error',
       loading: 'loading'
     })
