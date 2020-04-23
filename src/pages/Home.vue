@@ -11,7 +11,7 @@
           <countryList
             :value="country"
             :countries="countries"
-            :placeholder="!loading ? 'Select Country' : 'loading'"
+            :placeholder="!loading ? 'Whole World' : 'loading'"
             @changeHandler="this.changeCountry" />
           <b-form-datepicker
             :disabled="showAll || !country"

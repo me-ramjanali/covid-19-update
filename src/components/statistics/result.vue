@@ -1,9 +1,16 @@
 <template>
   <b-container class="bv-example-row">
-    <b-row class="mt-3" v-if="!data.length && fetched">
+    <div class="text-center mt-5" v-if="loading">
+      <b-spinner></b-spinner>
+      <b-spinner type="grow"></b-spinner>
+      <b-spinner variant="primary"></b-spinner>
+      <b-spinner variant="primary" type="grow"></b-spinner>
+      <b-spinner variant="success"></b-spinner>
+    </div>
+    <b-row class="mt-3" v-if="!data.length && fetched && !loading">
       <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>No record found!</h1></b-alert></b-col>
     </b-row>
-    <b-row class="mt-3" v-if="!fetched">
+    <b-row class="mt-3" v-if="!fetched && !loading">
       <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>Search for records!</h1></b-alert></b-col>
     </b-row>
     <b-row
