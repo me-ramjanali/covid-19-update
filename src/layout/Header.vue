@@ -5,7 +5,11 @@
       type="dark"
       variant="info">
       <b-navbar-brand href="/">
-        <img height="50" class="logo" src="../../public/icon.svg" alt="logo">Covid-19 Update
+        <img
+          height="50"
+          class="logo"
+          src="../../public/icon.svg"
+          alt="logo">Covid-19 Update
       </b-navbar-brand>
     </b-navbar>
   </div>
