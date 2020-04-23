@@ -11,8 +11,6 @@ import './mixins'
 import './plugins'
 import './thirdParty'
 
-import './scss/style.scss'
-import './assets/fonts/bebasneue.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
