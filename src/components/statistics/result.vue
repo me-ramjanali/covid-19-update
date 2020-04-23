@@ -1,5 +1,8 @@
 <template>
   <b-container class="bv-example-row">
+    <b-row class="mt-3" v-if="!data.length">
+      <b-col cols="12" class="p-0"><b-alert variant="danger" show><h1>No Data Found!</h1></b-alert></b-col>
+    </b-row>
     <b-row
       v-for="(result, index) in data"
       :key="index"
